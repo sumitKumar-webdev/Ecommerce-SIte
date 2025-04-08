@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { decQuantity, fetchCart, incQuantity, syncCart, deleteFromAppwrite, removeFromCart, setCheckoutItem } from '../store/cartSlice'
+import { decQuantity, incQuantity, syncCart, deleteFromAppwrite, removeFromCart, setCheckoutItem, clearCartFromAppwrite } from '../store/cartSlice'
 import { useNavigate } from 'react-router-dom'
 import Service from '../Appwrite/Config'
 
@@ -61,7 +61,17 @@ export const Cart = ({deliveryCharge=0}) => {
     }else{
         setLoading(false)
     }
-    },[])
+    },[cartItems])
+
+    const handleContinue = () => {
+        if (userId) {
+            dispatch(setCheckoutItem(cartItems))
+           dispatch(clearCartFromAppwrite(userId))
+            navigate('/order')
+        }else{
+            navigate('/')
+        }
+    }
 
 
 
@@ -88,7 +98,7 @@ export const Cart = ({deliveryCharge=0}) => {
                 const productDetail = product[item?.product_id];      
                const imgId = productDetail?.productImg[0];                           
                 const imgUrl = imgId? Service.getProductImg(imgId) : null;  
-                console.log(cartItems);
+
                                 
                 
                 return(
@@ -195,7 +205,7 @@ export const Cart = ({deliveryCharge=0}) => {
                <div className='w-full h-20 flex items-center border p-2'>
                 <button 
                 // TODO: Here Dispatch to make Cart Empty
-                onClick={()=>(dispatch(setCheckoutItem(cartItems)), navigate('/order'))}
+                onClick={handleContinue}
                 className='h-14 text-lg w-full rounded-md bg-black-1 text-white'>Continue</button></div>
             </div>
         </div> : 

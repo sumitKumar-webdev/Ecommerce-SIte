@@ -79,8 +79,8 @@ export const clearCartFromAppwrite = createAsyncThunk(
     async(userId, {rejectWithValue}) =>{
         try {
             const cartItems = await Service.getAllCartProduct(userId);
-            Promise.all(cartItems.documents.map((item)=>{
-                Service.removeFromCart(item.$id)
+            Promise.all(cartItems.documents.map(async (item)=>{
+               await Service.removeFromCart(item.$id)
             }))
             return [];
         } catch (error) {
@@ -132,7 +132,7 @@ const cartSlice = createSlice({
     },
 
     incQuantity: (state, action)=>{
-        const item = state.items.find(item=>item.product_id === action.payload.product_id);
+        const item = state.items.find(item=>item.product_id === action.payload.product_id && item.size === action.payload.size && item.color === action.payload.color);
        if (item) {
         item.quantity++;
         state.totalAmount += item.price;
@@ -141,7 +141,7 @@ const cartSlice = createSlice({
     },
 
     decQuantity: (state, action)=>{
-        const item = state.items.find(item=>item.product_id === action.payload.product_id);
+        const item = state.items.find(item=>item.product_id === action.payload.product_id && item.size === action.payload.size && item.color === action.payload.color);
        if (item && item.quantity > 1) {
         item.quantity--;
         state.totalAmount -= item.price;
@@ -187,6 +187,8 @@ const cartSlice = createSlice({
     })
     .addCase(clearCartFromAppwrite.fulfilled, (state)=>{
         state.items=[];
+        state.totalItem=0;
+        state.totalAmount=0;
     });
  }
 });

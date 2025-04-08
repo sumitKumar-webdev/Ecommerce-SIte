@@ -98,7 +98,7 @@ export const ProfileComponent = () => {
     <div className="min-h-dvh mx-auto p-6 font-syne">
 
     <p className="text-black mb-6">
-      <span className='text-gray-600 hover:underline hover:text-black cursor-pointer'>Home</span> / Profile
+      <span className='text-gray-600 hover:underline hover:text-black cursor-pointer' onClick={()=>navigate('/')}>Home</span> / Profile
     </p>
 
     {/* Profile Section */}
@@ -124,9 +124,10 @@ export const ProfileComponent = () => {
     {/* Order History */}
     <h3 className="text-lg font-semibold text-gray-900 mt-10 mb-4">Order History</h3>
     <div className="space-y-4">
-
-    {!loading?( 
-      <div>{orderItems?.map((item) => {
+      {orderItems?.length > 0 ? 
+      ( !loading?( 
+      <div>
+        {orderItems?.map((item) => {
         const productDetails = product[item?.$id]        
         
         return(
@@ -149,17 +150,35 @@ export const ProfileComponent = () => {
             {item.status}
           </span>
         </div>
-)})} </div>) : (
-  [1, 2, 3, 4].map(()=>(<div className="border border-gray-300 bg-gray-100 p-4 rounded-lg flex justify-between items-center animate-pulse">
-  <div className="space-y-2">
-    <div className="h-4 w-32 bg-slate-300 rounded"></div>
-    <div className="h-3 w-24 bg-gray-300 rounded"></div>
-  </div>
-  <div className="h-4 w-20 bg-gray-300 rounded"></div>
-  <div className="h-6 w-20 bg-gray-400 rounded-md"></div>
-</div>))
+         )})} </div>) : (
+         [1, 2, 3, 4].map(()=>(<div className="border border-gray-300 bg-gray-100 p-4 rounded-lg flex justify-between items-center animate-pulse">
+        <div className="space-y-2">
+        <div className="h-4 w-32 bg-slate-300 rounded"></div>
+        <div className="h-3 w-24 bg-gray-300 rounded"></div>
+        </div>
+       <div className="h-4 w-20 bg-gray-300 rounded"></div>
+       <div className="h-6 w-20 bg-gray-400 rounded-md"></div>
+      </div>))
   
-)}
+     )) : (
+        <div className='mt-36'>
+          <p className="text-gray-600 text-center mt-6">
+         You haven't placed any orders yet.
+          </p>
+        <div className="flex justify-center mt-4">
+      <button 
+     onClick={() => navigate('/')} 
+     className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition"
+     >
+     Start Shopping
+     </button>
+     </div>
+          
+
+        </div>
+      )}
+
+   
      
     </div>
   </div>
