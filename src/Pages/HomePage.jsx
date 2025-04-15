@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImgSlider } from '../Component/ImgSlider.jsx'
+import { ImgSlider } from '../Component/ImgSlider'
 import { CategorySection } from '../Component/CategorySection'
 
 /**
