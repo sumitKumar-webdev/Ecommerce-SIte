@@ -16,7 +16,7 @@ export const ProductCard = ({
             <img 
             src={imgSrc}
             alt="product img"
-            className={`rounded-xl h-96 sm:h-60 w-full object-cover ${className}`}
+            className={`rounded-xl h-80  w-full object-cover ${className}`}
             />
 
         </div>

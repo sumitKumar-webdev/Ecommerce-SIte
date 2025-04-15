@@ -25,10 +25,6 @@ export const UserInfo = (props) => {
         countryCode: data.countryCode,
         phone: data?.phone
       }
-      console.log('payload', payload);
-      
-
-      
         setError('')
         try {
 

@@ -28,13 +28,8 @@ export const Signup = (props) => {
       try {
          if (data) {
         const accData = await authService.createAccount(data);
-        console.log('accData',accData);
-        
-        
         if (accData) {
           const userData = await authService.getCurrentUser();
-          console.log('userData-',userData);
-          
           dispatch(login(userData))
           navigate('/userInfo')
         } else {
