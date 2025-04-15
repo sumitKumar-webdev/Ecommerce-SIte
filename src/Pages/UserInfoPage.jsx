@@ -1,6 +1,5 @@
 import React from 'react'
-import Container from '../Component/Container/Container'
-import { UserInfo } from '../Component/UserInfo'
+import { UserInfo } from '../Component/UserInfo.jsx'
 
 export const UserInfoPage = (props) => {
   return(
