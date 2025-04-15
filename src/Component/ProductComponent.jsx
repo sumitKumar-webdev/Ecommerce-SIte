@@ -5,7 +5,7 @@ import { CategorySection } from './CategorySection';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, setCheckoutItem } from '../store/cartSlice';
 import { fetchProduct } from '../store/productSlice';
-import { Loader } from './loader';
+import { Loader } from './Loader';
 
 
 export const ProductComponent = ({discount=20}) => {

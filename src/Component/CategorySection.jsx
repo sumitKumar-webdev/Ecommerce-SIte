@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ProductCard } from './productCard'
+import { ProductCard } from './ProductCard'
 import Service from '../Appwrite/Config';
 import { useNavigate } from 'react-router-dom';
 
