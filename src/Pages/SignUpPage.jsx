@@ -1,11 +1,5 @@
 import React from 'react'
-import Container from '../Component/Container/Container'
 import { Signup } from '../Component/Signup'
-
-/**
-* @author
-* @function SignUpPage
-**/
 
 export const SignUpPage = (props) => {
   return(
