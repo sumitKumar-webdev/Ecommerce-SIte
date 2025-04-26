@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Service from '../Appwrite/Config';
 
 
-export const UserInfo = (props) => {
+ const UserInfo = (props) => {
     const[error, setError] = useState(null);
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
@@ -126,3 +126,5 @@ export const UserInfo = (props) => {
      </div>
    )
   }
+
+  export default UserInfo;
