@@ -7,12 +7,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeClosed } from 'lucide-react';
 
-/**
-* @author
-* @function Signup
-**/
-
-export const Signup = (props) => {
+export const SignUp = (props) => {
     const { register, handleSubmit } = useForm();
     const dispatch = useDispatch();
     const [showPassword, setShowPassword] = useState(false);
