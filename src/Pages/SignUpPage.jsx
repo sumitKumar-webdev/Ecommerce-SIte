@@ -1,5 +1,5 @@
 import React from 'react'
-import { SignUp } from '../Component/Signup.jsx'
+import { SignUp } from '../Component/Signup'
 
 export const SignUpPage = (props) => {
   return(
