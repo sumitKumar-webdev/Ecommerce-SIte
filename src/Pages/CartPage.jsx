@@ -1,6 +1,6 @@
 import React from 'react'
-import Container from '../Component/Container/Container'
-import { Cart } from '../Component/Cart'
+import Container from '../Components/Container/Container'
+import { Cart } from '../Components/Cart'
 
 export const CartPage = (props) => {
   return(

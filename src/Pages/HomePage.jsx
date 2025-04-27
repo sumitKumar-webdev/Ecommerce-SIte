@@ -1,6 +1,6 @@
 import React from 'react'
-import { ImgSlider } from '../Component/ImgSlider'
-import { CategorySection } from '../Component/CategorySection'
+import { ImgSlider } from '../Components/ImgSlider'
+import { CategorySection } from '../Components/CategorySection'
 
 /**
 * @author

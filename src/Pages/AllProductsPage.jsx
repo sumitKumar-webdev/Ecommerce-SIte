@@ -1,6 +1,6 @@
 import React from 'react'
-import { CategorySection } from '../Component/CategorySection'
-import Container from '../Component/Container/Container'
+import { CategorySection } from '../Components/CategorySection'
+import Container from '../Components/Container/Container'
 import { useParams } from 'react-router-dom'
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import Container from '../Component/Container/Container'
-import { Login } from '../Component/login'
+import Container from '../Components/Container/Container'
+import { Login } from '../Components/login'
 
 export const LoginPage = (props) => {
   return(

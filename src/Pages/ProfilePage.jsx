@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProfileComponent } from '../Component/profileComponent'
+import { ProfileComponent } from '../Components/profileComponent'
 
 export const ProfilePage = (props) => {
   return(

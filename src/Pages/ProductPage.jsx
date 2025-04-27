@@ -1,6 +1,6 @@
 import React from 'react'
-import Container from '../Component/Container/Container'
-import { ProductComponent } from '../Component/ProductComponent'
+import Container from '../Components/Container/Container'
+import { ProductComponent } from '../Components/ProductComponent'
 
 /**
 * @author

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Contact } from '../Component/Contact'
-import Container from '../Component/Container/Container'
+import { Contact } from '../Components/Contact'
+import Container from '../Components/Container/Container'
 
 /**
 * @author
