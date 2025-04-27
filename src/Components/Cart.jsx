@@ -69,7 +69,8 @@ export const Cart = ({deliveryCharge=0}) => {
            dispatch(clearCartFromAppwrite(userId))
             navigate('/order')
         }else{
-            navigate('/')
+            alert('Login to Continue')
+            navigate('/login')
         }
     }
 
