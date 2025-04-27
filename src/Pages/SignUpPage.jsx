@@ -1,5 +1,5 @@
 import React from 'react'
-import  SignUp  from '../Component/Signup'
+import SignUp from '../Component/Signup'
 
 export const SignUpPage = (props) => {
   return(
