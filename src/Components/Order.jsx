@@ -11,7 +11,6 @@ const Order = () => {
   const [userInfo, setUserInfo] = useState();
   const navigate = useNavigate();
   const Items = useSelector((state)=>state.cart.checkoutItems);
-  console.log('Items' , Items);
 
   const UserData = useSelector((state)=> state.auth.userData)  
   const totalAmount = Items.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -122,7 +121,7 @@ fetchUserInfo();
 
       <h2 className="text-xl font-semibold mt-6">Shipping Details</h2>
       <div className="mt-2 space-y-3">
-        <p className="border p-2 rounded">{UserData.name}</p>
+        <p className="border p-2 rounded">{UserData?.name}</p>
         <p className="border p-2 rounded">{userInfo?.countryCode} {userInfo?.phone}</p>
         <p className="border p-2 rounded">{userInfo?.address}</p>
         <p className="border p-2 rounded">{userInfo?.pincode}</p>

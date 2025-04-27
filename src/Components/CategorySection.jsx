@@ -44,12 +44,12 @@ export const CategorySection = ({Category='Oversized',limit=4, sectionTitle='Ove
                         className='flex justify-center' 
                         key={product.$id}> 
                         <ProductCard
-                        width={'300' }
-                        // key={product.$id} 
+                        width={ '300' }
+                        key={product.$id} 
                         title={product.title}
                         price={product.price}
                         imgSrc={imgUrl.href}
-                        className=' sm:w-60 md:w-72 lg:w-[300px] caret-transparent' 
+                        className='w-[220px] sm:w-[270px] md:w-[290px] lg:w-[300px] xl:w-[320px] caret-transparent' 
                     /></div>
                       
                     )
@@ -60,7 +60,7 @@ export const CategorySection = ({Category='Oversized',limit=4, sectionTitle='Ove
             </div>
         </div>
         {button &&  <div className='flex justify-center overflow-hidden'>
-            <button type="button" className='bg-black-1 mt-32 border w-36 h-14 rounded-3xl text-white text-lg cursor-pointer transtion duration-300' onClick={()=>navigate(`/products/${Category}`)}>View All</button>
+            <button type="button" className='bg-black-1 mt-32 border w-36 h-14 rounded-3xl text-white text-lg cursor-pointer transition duration-300' onClick={()=>navigate(`/products/${Category}`)}>View All</button>
         </div> }
 
        

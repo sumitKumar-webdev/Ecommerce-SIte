@@ -29,8 +29,8 @@ export const Header = () => {
 
 {/* ------------------------------NAv Buttons------------------------------ */}
 
-            <div >
-                <ul className='flex mt-1 space-x-14 text-white font-syne text-lg'>
+            <div className='sm:text-sm md:text-base lg:text-lg'>
+                <ul className='flex mt-1 space-x-14 text-white font-syne '>
                     
                     <li className='cursor-pointer'>
                         <NavLink to='/'>

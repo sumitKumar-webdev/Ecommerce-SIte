@@ -10,7 +10,7 @@ export const ProductCard = ({
 }) => {
   return(
     <div 
-    className="h-[380px] sm:h-60 cursor-pointer  transition-transform duration-300 hover:scale-105  font-syne"
+    className="lg:h-[380px] sm:h-60 md:h-72 cursor-pointer  transition-transform duration-300 hover:scale-105  font-syne"
     style={{ width: `${width}px` }}>
         <div className='flex justify-center'>
             <img 
