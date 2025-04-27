@@ -1,16 +1,15 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { Provider } from 'react-redux'
 import { store } from './store/store.js'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import {CartPage, HomePage, LoginPage, OrderPage, SignUpPage, UserInfoPage} from './Component/index.js'
-import {AboutPage} from './Component/index.js'
-import {ContactUsPage} from './Component/index.js'
-import {ProductPage} from './Component/index.js'
-import {AllProductsPage} from './Component/index.js'
-import { ProfilePage } from './Component/index.js'
+import {CartPage, HomePage, LoginPage, OrderPage, SignUpPage, UserInfoPage} from './Components/index.js'
+import {AboutPage} from './Components/index.js'
+import {ContactUsPage} from './Components/index.js'
+import {ProductPage} from './Components/index.js'
+import {AllProductsPage} from './Components/index.js'
+import { ProfilePage } from './Components/index.js'
 
 
 const router = createBrowserRouter([
