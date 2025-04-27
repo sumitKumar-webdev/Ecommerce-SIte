@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
-import { Footer } from './Component/Footer/Footer.jsx'
-import { Header } from './Component/Header/Header.jsx'
-import { OfferBanner } from './Component/OfferBanner/OfferBanner.jsx'
+import { Footer } from './Components/Footer/Footer.jsx'
+import { Header } from './Components/Header/Header.jsx'
+import { OfferBanner } from './Components/OfferBanner/OfferBanner.jsx'
 
 
 function App() {
