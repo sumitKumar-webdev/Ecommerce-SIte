@@ -54,7 +54,7 @@ export class appwriteServices {
 
      getProductImg(fileID){
         try {
-            return  this.bucket.getFilePreview(
+            return  this.bucket.getFileView(
                 Conf.appwriteBucketId,
                 fileID,
             )
