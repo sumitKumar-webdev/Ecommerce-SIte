@@ -8,6 +8,7 @@ import { fetchProduct } from '../store/productSlice';
 import { Loader } from './Loader';
 
 
+
 export const ProductComponent = ({discount=20}) => {
     const navigate = useNavigate();
     const [selectdSize, setSelectdSize] = useState();
@@ -19,6 +20,7 @@ export const ProductComponent = ({discount=20}) => {
 
   
     const { product, status }= useSelector((state)=>state.product)
+    const user = useSelector((state)=>state.auth.userData)
 
     
     useEffect(() => {
@@ -67,6 +69,11 @@ useEffect(()=>{
 
     
     const handleBuyNow = () =>{
+      if(!user){
+        alert('login to Buy Now');
+        navigate('/login');
+        return
+      }
       if(!selectdSize){
         setError(true)
         return
