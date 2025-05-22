@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 
 
 const images =[
-     'https://cloud.appwrite.io/v1/storage/buckets/67cef615000af5d7467d/files/67e67a2a00143da8ec0f/view?project=67cee1e8002271eb6b57&mode=admin',
+     'https://cloud.appwrite.io/v1/storage/buckets/67cef615000af5d7467d/files/67e67a2a00143da8ec0f/view?project=67cee1e8002271eb6b57&mode=any',
 
-    'https://cloud.appwrite.io/v1/storage/buckets/67cef615000af5d7467d/files/67e67a310027b7db363c/view?project=67cee1e8002271eb6b57&mode=admin',
+    'https://cloud.appwrite.io/v1/storage/buckets/67cef615000af5d7467d/files/67e67a310027b7db363c/view?project=67cee1e8002271eb6b57&mode=any',
 
-    'https://cloud.appwrite.io/v1/storage/buckets/67cef615000af5d7467d/files/67e67a6a000da49bd30a/view?project=67cee1e8002271eb6b57&mode=admin'
+    'https://cloud.appwrite.io/v1/storage/buckets/67cef615000af5d7467d/files/67e67a6a000da49bd30a/view?project=67cee1e8002271eb6b57&mode=any'
 ];
 
 export const ImgSlider = (props) => {
