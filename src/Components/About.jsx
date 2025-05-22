@@ -14,7 +14,7 @@ export const About = (props) => {
 
         <div className="grid md:grid-cols-2 gap-5 items-center">
           <div className='p-7'>
-            <img src="https://cloud.appwrite.io/v1/storage/buckets/67cef615000af5d7467d/files/67e57dc800094c819476/view?project=67cee1e8002271eb6b57&mode=admin" alt="Our Team" className="rounded-lg shadow-md" />
+            <img src="https://cloud.appwrite.io/v1/storage/buckets/67cef615000af5d7467d/files/67e57dc800094c819476/view?project=67cee1e8002271eb6b57&mode=any" loading='lazy' alt="Our Team" className="rounded-lg shadow-md" />
           </div>
           <div className="text-gray-700">
             <h2 className="text-2xl text-black font-semibold mb-4">Our Story</h2>
