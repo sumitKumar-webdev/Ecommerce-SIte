@@ -16,6 +16,7 @@ export const ProductCard = ({
             <img 
             src={imgSrc}
             alt="product img"
+            loading='lazy'
             className={`rounded-xl h-80  w-full object-cover ${className}`}
             />
 

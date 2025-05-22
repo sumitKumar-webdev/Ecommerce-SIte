@@ -30,7 +30,7 @@ export const ImgSlider = (props) => {
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
                 {images.map((img, index) => (
-                    <img key={index} src={img} alt="T-Shirt" className="w-full h-[500px]object-cover" />
+                    <img key={index} loading='lazy' src={img} alt="T-Shirt" className="w-full h-[500px]object-cover" />
                 ))}
             </div>
 
